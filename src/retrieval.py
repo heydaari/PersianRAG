@@ -10,10 +10,10 @@ def get_directory_documents(path : str):
         raise FileNotFoundError(f'{path} does not exist')
 
     files_names = os.listdir(path)
-    readme_files_names = [file for file in files_names if file.endswith('.md') == True]
+    readme_files_names = [file for file in files_names if file.endswith('.txt') == True]
 
     if len(readme_files_names) == 0:
-        raise ValueError(f'path : {path} does not contain any markdown files')
+        raise ValueError(f'path : {path} does not contain any text files')
 
     documents = []
     for file in readme_files_names:
